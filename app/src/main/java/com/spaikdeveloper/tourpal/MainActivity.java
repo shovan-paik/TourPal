@@ -12,7 +12,9 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
-        implements BottomNavigationView.OnNavigationItemSelectedListener {
+        implements BottomNavigationView.OnNavigationItemSelectedListener,
+        HomeFragment.AddEventListener {
+
 
 
     @Override
@@ -60,5 +62,13 @@ public class MainActivity extends AppCompatActivity
         }
 
         return loadFragment(fragment);
+    }
+
+    @Override
+    public void onAddEventListener() {
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.fragmentContainerFL,new InputEventInformationFragment())
+                .commit();
     }
 }
