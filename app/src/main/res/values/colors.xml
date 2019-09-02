@@ -6,4 +6,5 @@
 
 
     <color name="bottomnav_background_color">#303F9F</color>
+    <color name="flotingButton_backgroundTint_color">#303F9F</color>
 </resources>
